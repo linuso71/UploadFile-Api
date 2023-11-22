@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload | Login Page</title>
+</head>
+<body style="background: antiquewhite">
+
+    <h1>File Upload</h1>
+    <h3>Login Here</h3>
+
+    {% if message %}
+        <p style="color : green">{{ message }}</p>
+    {% endif %} <!--   closing if statement-->
+    <form action="/perform_login" method="post">
+        <label>Email</label><br>
+        <input type="email" name="user_email"><br>
+
+        <label>Password</label><br>
+        <input type="password" name="user_password"><br><br>
+
+        <input type="submit" value="Login">
+
+        <p>Not a Member ? <a href="/register">Register Here</a></p>
+
+    </form>
+
+</body>
+</html>
